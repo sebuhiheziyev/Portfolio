@@ -211,14 +211,7 @@ main .main-area .main-head .head-right .contact li .overhead {
 }
 
 #main-body .side-bar .navigation li a.active {
-  color: white;
-  background-color: #ff8c4e;
-  -webkit-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
-}
-
-#main-body .side-bar .navigation li a.active:hover {
-  background-color: #ff6a1a;
+  color: #304CFD;
 }
 
 #main-body .side-bar-sticky {
@@ -353,6 +346,52 @@ main .main-area .main-head .head-right .contact li .overhead {
   background-image: linear-gradient(142.17deg, #3086FF 6.66%, #304CFD 91.48%);
   width: auto;
   cursor: pointer;
+}
+
+#main-body .portfolio-page .project {
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#main-body .portfolio-page .project .project-head {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#main-body .portfolio-page .project .project-head:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#main-body .portfolio-page .project .project-head img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#main-body .portfolio-page .project .project-body {
+  padding: 15px;
+  height: 105px;
+  width: 100%;
+  background-color: #F7F9FA;
+}
+
+#main-body .portfolio-page .project .project-body .project-name {
+  font-size: 18px;
+  color: #3B4B5E;
+  font-weight: 700;
+}
+
+#main-body .portfolio-page .project .project-body .project-info {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 footer {
