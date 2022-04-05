@@ -349,23 +349,73 @@ main .main-area .main-head .head-right .contact li .overhead {
 }
 
 #main-body .portfolio-page .project {
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
   overflow: hidden;
   margin-bottom: 20px;
+  border: 1px solid #D1D1D180;
+  position: relative;
+}
+
+#main-body .portfolio-page .project:hover .overlay {
+  opacity: 1;
+}
+
+#main-body .portfolio-page .project .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 327.33px;
+  border-radius: 20px 20px 0px 0px;
+  background-color: rgba(46, 47, 54, 0.52);
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  opacity: 0;
+  z-index: 999;
+}
+
+#main-body .portfolio-page .project .overlay img {
+  position: absolute;
+  top: calc(50% - 22.5px);
+  left: calc(50% - 22.5px);
+  color: #fff;
+  width: 45px;
 }
 
 #main-body .portfolio-page .project .project-head {
   height: 200px;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
-#main-body .portfolio-page .project .project-head:hover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+#main-body .portfolio-page .project .project-head:hover .overlay {
+  opacity: 1;
 }
 
-#main-body .portfolio-page .project .project-head img {
+#main-body .portfolio-page .project .project-head .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 327.33px;
+  border-radius: 20px 20px 0px 0px;
+  background-color: rgba(46, 47, 54, 0.52);
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  opacity: 0;
+  z-index: 999;
+}
+
+#main-body .portfolio-page .project .project-head .overlay img {
+  position: absolute;
+  top: calc(50% - 22.5px);
+  left: calc(50% - 22.5px);
+  color: #fff;
+  width: 45px;
+}
+
+#main-body .portfolio-page .project .project-head .project-img {
   width: 100%;
   height: 100%;
   -webkit-transition: all 0.4s ease;
@@ -373,10 +423,11 @@ main .main-area .main-head .head-right .contact li .overhead {
 }
 
 #main-body .portfolio-page .project .project-body {
-  padding: 15px;
-  height: 105px;
+  padding: 10px 15px;
+  height: 47px;
   width: 100%;
   background-color: #F7F9FA;
+  border-top: 1px solid #D1D1D180;
 }
 
 #main-body .portfolio-page .project .project-body .project-name {
@@ -385,13 +436,114 @@ main .main-area .main-head .head-right .contact li .overhead {
   font-weight: 700;
 }
 
-#main-body .portfolio-page .project .project-body .project-info {
+#main-body .portfolio-page .project .project-body:hover .project-name {
+  color: black;
+}
+
+#main-body .blog-page .blog {
+  border-radius: 20px 20px 0px 0px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #D1D1D180;
+}
+
+#main-body .blog-page .blog .project-head {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#main-body .blog-page .blog .project-head:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#main-body .blog-page .blog .project-head img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#main-body .blog-page .blog .project-body {
+  padding: 15px;
+  height: 105px;
+  width: 100%;
+  background-color: #F7F9FA;
+  border-top: 1px solid #D1D1D180;
+}
+
+#main-body .blog-page .blog .project-body .project-name {
+  font-size: 18px;
+  color: #3B4B5E;
+  font-weight: 700;
+}
+
+#main-body .blog-page .blog .project-body .project-info {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+#main-body .blog-page .blog .project-body:hover .project-name {
+  color: black;
+}
+
+#main-body .post-page .post-images-slider {
+  position: relative;
+}
+
+#main-body .post-page .post-images-slider .my-slider {
+  width: 100%;
+  height: 600px;
+  display: none;
+}
+
+#main-body .post-page .post-images-slider .my-slider .number-slider {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  background-color: black;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+#main-body .post-page .post-images-slider .my-slider img {
+  width: 100%;
+  height: 100%;
+}
+
+#main-body .post-page .post-images-slider .change-image-btn {
+  position: absolute;
+  top: calc(50% - 25px);
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+  color: #fff;
+  padding: 13px 10px;
+}
+
+#main-body .post-page .post-images-slider .change-image-btn:hover {
+  background-color: black;
+}
+
+#main-body .post-page .post-images-slider .change-image-btn i {
+  font-size: 20px;
+}
+
+#main-body .post-page .post-images-slider .beforeImage {
+  left: 0;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#main-body .post-page .post-images-slider .afterImage {
+  right: 0;
+  border-radius: 10px 0px 0px 10px;
 }
 
 footer {

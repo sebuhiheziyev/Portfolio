@@ -315,9 +315,99 @@ main{
     //start portfoliopage
     .portfolio-page{
         .project{
-            border-radius: 20px;
+            border-radius: 20px 20px 0px 0px;
             overflow: hidden;
             margin-bottom: 20px;
+            border: 1px solid #D1D1D180;
+            position: relative;
+            &:hover{
+                .overlay{
+                    opacity: 1;
+                }
+            }
+            .overlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 200px;
+                width: 327.33px;
+                border-radius: 20px 20px 0px 0px;
+                background-color: rgba(46, 47, 54, 0.52);
+                transition: all .25s ease-in-out;
+                opacity: 0;
+                z-index: 999;
+                img{
+                    position: absolute;
+                    top:calc(50% - 22.5px);
+                    left:calc(50% - 22.5px);
+                    color: #fff;
+                    width: 45px;
+                }
+            }
+            .project-head{
+                height: 200px;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+                &:hover{
+                    .overlay{
+                        opacity: 1;
+                    }
+                }
+                .overlay{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 200px;
+                    width: 327.33px;
+                    border-radius: 20px 20px 0px 0px;
+                    background-color: rgba(46, 47, 54, 0.52);
+                    transition: all .25s ease-in-out;
+                    opacity: 0;
+                    z-index: 999;
+                    img{
+                        position: absolute;
+                        top:calc(50% - 22.5px);
+                        left:calc(50% - 22.5px);
+                        color: #fff;
+                        width: 45px;
+                    }
+                }
+
+                .project-img{
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.4s ease;
+                }
+            }
+            .project-body{
+                padding: 10px 15px;
+                height: 47px;
+                width: 100%;
+                background-color: #F7F9FA;
+                border-top: 1px solid #D1D1D180;
+                .project-name{
+                    font-size: 18px;
+                    color: #3B4B5E;
+                    font-weight: 700;
+                }
+                &:hover{
+                    .project-name{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    //end portfolio page
+
+    //start blog page
+    .blog-page{
+        .blog{
+            border-radius: 20px 20px 0px 0px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 1px solid #D1D1D180;
             .project-head{
                 height: 200px;
                 width: 100%;
@@ -338,6 +428,7 @@ main{
                 height: 105px;
                 width: 100%;
                 background-color: #F7F9FA;
+                border-top: 1px solid #D1D1D180;
                 .project-name{
                     font-size: 18px;
                     color: #3B4B5E;
@@ -351,6 +442,60 @@ main{
                     -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical;
                 }
+                &:hover{
+                    .project-name{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    //end blog page
+
+    //start post page
+    .post-page{
+        .post-images-slider{
+            position: relative;
+            .my-slider{
+                width: 100%;
+                height: 600px;
+                display: none;
+                .number-slider{
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    color: #fff;
+                    background-color: black;
+                    padding: 2px 8px;
+                    border-radius: 20px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .change-image-btn{
+                position: absolute;
+                top: calc(50% - 25px);
+                background-color: rgba(0, 0, 0, 0.8);
+                cursor: pointer;
+                transition: background-color 0.4s ease;
+                color: #fff;
+                padding: 13px 10px;
+                &:hover{
+                    background-color: black;
+                }
+                i{
+                    font-size: 20px;
+                }
+            }
+            .beforeImage{
+                left: 0;
+                border-radius: 0px 10px 10px 0px;
+            }
+            .afterImage{
+                right: 0;
+                border-radius: 10px 0px 0px 10px;
             }
         }
     }
